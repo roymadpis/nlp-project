@@ -1,0 +1,74 @@
+Current Time: 13:55:15 (Date: 26.04.22)   *****************************************   
+
+1 -> Got from twitter 500 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 500
+
+2 -> Got from twitter 499 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 999
+
+3 -> Got from twitter 499 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 1498
+
+4 -> Got from twitter 497 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 1995
+
+5 -> Got from twitter 500 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 2495
+
+6 -> Got from twitter 499 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 2994
+
+7 -> Got from twitter 500 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 3494
+
+8 -> Got from twitter 499 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 3993
+
+9 -> Got from twitter 500 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 4493
+
+10 -> Got from twitter 500 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 4993
+
+11 -> Got from twitter 499 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 5492
+
+12 -> Got from twitter 498 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 5990
+
+13 -> Got from twitter 499 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 6489
+
+14 -> Got from twitter 500 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 6989
+
+15 -> Got from twitter 499 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 7488
+
+16 -> Got from twitter 500 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 7988
+
+17 -> Got from twitter 500 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 8488
+
+18 -> Got from twitter 497 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 8985
+
+19 -> Got from twitter 500 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 9485
+
+20 -> Got from twitter 499 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 9984
+
+21 -> Got from twitter 497 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 10481
+
+22 -> Got from twitter 495 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 10976
+
+23 -> Got from twitter 494 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 11470
+
+24 -> Got from twitter 458 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 11928
+

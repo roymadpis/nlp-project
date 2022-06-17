@@ -1,0 +1,32 @@
+Current Time: 11:02:37 (Date: 14.05.22)   *****************************************   
+
+1 -> Got from twitter 500 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 500
+
+2 -> Got from twitter 499 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 999
+
+3 -> Got from twitter 500 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 1499
+
+4 -> Got from twitter 500 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 1999
+
+5 -> Got from twitter 500 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 2499
+
+6 -> Got from twitter 500 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 2999
+
+7 -> Got from twitter 500 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 3499
+
+8 -> Got from twitter 500 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 3999
+
+9 -> Got from twitter 500 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 4499
+
+10 -> Got from twitter 126 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 4625
+

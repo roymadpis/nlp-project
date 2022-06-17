@@ -1,0 +1,8 @@
+Current Time: 13:28:20 (Date: 26.04.22)   *****************************************   
+
+1 -> Got from twitter 500 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 500
+
+2 -> Got from twitter 187 tweets, and there are more tweets of that user to get, I am bringing more tweets!
+Total amount of tweets: 687
+
