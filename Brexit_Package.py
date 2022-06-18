@@ -2163,46 +2163,33 @@ Note that the format of the end time should be: "2021-12-26T00:00:00Z" (this is 
         return json_response_list, num_of_returned_tweets, next_tokens
 
 ##########################################################################################################
-#### return tweets given query
+#### return tweets given tweet ids
 
 
     def return_tweets_given_tweet_ids_new(self, tweet_ids=[], number_of_tweets_in_batch = 100,
                                            verbose_10 = False, dir_name = "tweets_by_tweet_ids",
                                   csv_table_name = "brexit_tweet_ids", api_error_sleep_secs = 60):
-        """ ## Return Tweets of given query
+        """ ## Return Tweets of of given tweet ids
 
-This function enalbes getting all the tweets that follow the given query.\n
+This function enalbes getting all the tweets that are in a list of given tweet ids.\n
 
 + link to twitter-developer page regarding this capability:
 https://developer.twitter.com/en/docs/twitter-api/tweets/search/api-reference/get-tweets-search-all
-
-+ link to twitter-developer page regarding building a query:
-https://developer.twitter.com/en/docs/twitter-api/tweets/search/integrate/build-a-query
 
 ### App rate limit:
         - App rate limit (Application-only): 900 requests per 15-minute window shared among all users of your app
         - User rate limit (User context): 900 requests per 15-minute window per each authenticated user
         
 Parameters
-- query : str --> You can see the full documentation on how to build a query (what to pass in the `query` argument) in the following link:\n
-https://developer.twitter.com/en/docs/twitter-api/tweets/counts/integrate/build-a-query
-        
+- tweet_ids - a list with tweet ids (must be a list of strings)
+
 - dir_name: by defualy "tweets_by_tweet_ids" --> the dir name to put all the data from the function
 
-- start_date = The start date is the date that from it the function will look and rerieve tweets.\n
-Note that the format of the start time should be: "2015-12-7T00:00:00Z" (this is the default)
-
-- end_date = The end date is the date that till it the function will look and rerieve tweets.\n
-Note that the format of the end time should be: "2021-12-26T00:00:00Z" (this is the default)
-
-- max_results = The max number of tweets to retrieve in a given call. Must be an integer between 10 to 500.
-- evaluate_last_token - by default = False--> If you have already retrive dataand you wish to continue retriving from the place you stopped, pass "True" to this arguemnt.
-
-- limit_amount_of_returned_tweets - by default = 10000000 --> Lets say a given account had 5000 tweets in the given timeframe (from the given start to the given end date), and you wish to get only the first 2000, then pass to this arguemnt 2000. It will automatically stop the function when it reaches the `limit_amount_of_returned_tweets` you provided
+- number_of_tweets_in_batch = The max number of tweets to retrieve in a given call. Must be an integer between 1 to 100.
 
 - verbose_10 - by default = False --> If True then the function will print certain things throught the run of the function.    
 
-- csv_table_name - the csv name that you wish to give to the table that the function generates. Note that this name will also be the name of the log dir that will contain the tokens and the tweets-json file. This is important as if you wish to continue searching for more tweets of the same query, you need to provide the same csv table name and of course write "True" in the argument: evaluate_last_token
+- csv_table_name - the csv name that you wish to give to the table that the function generates. Note that this name will also be the name of the log dir that will contain the tokens and the tweets-json file. This is important as if you wish to continue searching for more tweets of the same query, you need to provide the same csv table name
         """
         search_url = "https://api.twitter.com/2/tweets/?ids=X" #endpoint use to collect data from
         
@@ -2355,91 +2342,6 @@ Note that the format of the end time should be: "2021-12-26T00:00:00Z" (this is 
                 f.write(print_stat+'\n')
                 print_total = "Total amount of tweets: " + str(num_of_returned_tweets)
                 f.write(print_total+ '\n\n')
-
-#             if "next_token" in json_response["meta"]:
-#                 if (verbose_10 == True and counter_loops % 20 == 1):
-#                     print(counter_loops, "Got from twitter", json_response["meta"]["result_count"], "tweets, and there are more tweets of that user to get, I am bringing more tweets!\n")
-#                 #elif verbose_10 == False:
-#                     #print(counter_loops, "Got from twitter", json_response["meta"]["result_count"], "tweets, and there are more tweets of that user to get, I am bringing more tweets!\n")
-#                 next_token = json_response["meta"]["next_token"]
-#                 query_params["next_token"] = next_token
-#                 next_tokens.append(next_token)
-#                 #ids_token_print = "next token = " + next_token + "newest id: " + json_response["meta"]["newest_id"] + " | oldest id: " + json_response["meta"]["oldest_id"]
-#                 ids_token_print = next_token
-#                 with open(path_for_dir_tokens, 'a') as f:
-#                     f.write(ids_token_print + '\n\n')
-#             else:
-#                 print("no more tweets from this user")
-#                 continue_searching = False
-#                 print("Total amount of collected tweets = ", num_of_returned_tweets)
-
-#             if num_of_returned_tweets >=limit_amount_of_returned_tweets:
-#                 print("oooops, There may be more tweets to return, but you asked to limit the amount of returned tweets")
-#                 print("infact you got", num_of_returned_tweets, "returned tweets and limited the function to get", limit_amount_of_returned_tweets, "tweets")
-
-            #In what case we suspect that there may be more tweets that we didn't get? -->
-            #When the number of tweets we asked to get is equal to the number of tweets we got back
-#         if user_name is not None:
-#             query = str(query) + " from:" + str(user_name)
-#             try: #displaying with print the start and end time + the user name that the function will try to retirve tweets
-#                 display_start_time = datetime.strptime(start_time.split("T")[0], "%Y-%m-%d").strftime("%d-%m-%Y")
-#                 display_end_time = datetime.strptime(end_time.split("T")[0], "%Y-%m-%d").strftime("%d-%m-%Y")
-#             except:
-#                 display_start_time = start_time
-#                 display_end_time = end_time
-#             print("Bringing all the tweets of the user:", user_name, "from:", display_start_time, "to", display_end_time)
-#             print()
-
-            
-
-        # Opening the Tokens text-file (if not exist)
-        ########### If the token file exist already, then take the last token available, else start from token 1  ############
-#         tokens_location = os.path.join(dir_log_name,csv_table_name, "tokens.txt")
-
-#         if (evaluate_last_token == True and os.path.isfile(tokens_location) == True):
-#             a_file = open(tokens_location, "r")
-#             lines = a_file.readlines()
-#             last_lines = lines[-2]
-#             next_token = last_lines[0:-1]
-#             a_file.close()
-#         else:
-#             next_token = None
-
-        ################ Add a time stamp ########################################
-#         path_for_dir_tokens = os.path.join(path_for_log_dir_of_certain_query, 'tokens.txt')
-#         with open(path_for_dir_tokens, 'a') as f:
-#             from datetime import datetime
-#             now = datetime.now()
-#             current_time = now.strftime("%H:%M:%S (Date: %d.%m.%y)")
-#             current_time = "Current Time: " + current_time + "   *****************************************   "
-#             f.write(current_time+ '\n\n')
-
-        ############################################# The main for loop #############################################
-
-#         continue_searching = True #logical variable that controls the for loop, as long as it is True, the function will keep trying to retrive tweets
-#         json_response_list = [] #list containing all the json responses the function got. In each loop we are
-#         #saving that list in the log-json file (so if there was a problem in a certain loop, we would have all the jsons till that problematic loop)
-#         next_tokens = [] #list containing all the tokens
-#         num_of_returned_tweets = 0 # counter of returned tweets
-#         counter_loops = 0 #counter of the loops - the number of calls to twitter API
-
-#         while continue_searching == True and num_of_returned_tweets < limit_amount_of_returned_tweets:
-#             counter_loops +=1
-
-#             #change params based on the endpoint you are using
-#             query_params = {'query': query,
-#                         'start_time': start_time,
-#                         'end_time': end_time,
-#                         'max_results': max_results,
-#                         'expansions': 'author_id,in_reply_to_user_id,geo.place_id,entities.mentions.username,referenced_tweets.id',
-#                         'user.fields': 'id,name,username,created_at,description,public_metrics,verified',
-#                         'tweet.fields': 'id,text,author_id,in_reply_to_user_id,geo,conversation_id,created_at,lang,public_metrics,referenced_tweets,reply_settings,source',
-#                         'place.fields': 'full_name,id,country,country_code,geo,name,place_type',
-#                         'next_token': {next_token}}
-
-#             json_response = self.__connect_to_endpoint( url = search_url, params= query_params)
-
-            
 
         return json_response_list, num_of_returned_tweets, problematic_batches
 
